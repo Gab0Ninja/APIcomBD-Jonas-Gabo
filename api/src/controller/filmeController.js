@@ -47,7 +47,7 @@ server.post('/filme', async (req, resp) =>{
         })
     }
 })
-
+    
 server.put('/filmes/:id/capa', upload.single('capa') , async (req, resp) => {
     try {
         const { id } = req.params;
