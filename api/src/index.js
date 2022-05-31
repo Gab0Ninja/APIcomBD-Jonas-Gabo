@@ -14,6 +14,10 @@ server.use(express.json());
 server.use('/storage/capasFilmes', express.static('storage/capasFilmes'))
 
 
+//liberar arquivos  da storage
+server.use('/storage/capasFilmes', express.static('storage/capasFilmes'))
+
+
 //configuração dos Endpoints
 server.use(usuarioController);
 server.use(filmeController);
