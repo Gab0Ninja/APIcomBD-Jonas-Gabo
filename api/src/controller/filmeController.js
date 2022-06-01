@@ -106,7 +106,7 @@ server.get('/filmes/:id', async (req, resp) => {
         const resposta = await buscarPorId(id);
   
         if (!resposta) {
-            throw new Error('vc tá maluco meu?')
+            throw new Error('Error!')
         }
 
         resp.send(resposta);
@@ -125,7 +125,7 @@ server.delete('/filmes/:id', async (req, resp) => {
         const resposta = await removerFilme(id);
 
         if (resposta != 1) {
-            throw new Error ('ERRO SEU BURRÃO DO CACETE')
+            throw new Error ('Error!')
         }
 
         resp.status(204).send();
@@ -169,7 +169,7 @@ server.put('/filmes/:id', async (req,resp) => {
 
         const resposta = await alterarFilme(id, filme);
         if (resposta != 1) {
-            throw new Error ('BURRO PARACE UMA MULA');
+            throw new Error ('Error!');
             
         }
         else{
